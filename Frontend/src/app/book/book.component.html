@@ -1,0 +1,59 @@
+
+<div class="container" style="padding: 30px;">
+
+    <div class="card">
+        <form #book="ngForm"  >
+            <div class="card-header" style="padding: 15px;">
+          BOOKING
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                       
+                        <tbody>
+<tr>
+    <td><label> Guide Name:</label></td>
+    <td>
+        <input [readonly]=true type="text" name="p_name"[(ngModel)]="guideList.Name" >
+    </td></tr>
+    <tr>
+        <td><label>District:</label></td>
+        <td><input [readonly]=true name="p_district" [(ngModel)]="guideList.district" ></td>
+    </tr>
+    <tr>
+        <td><label> Guide Phone:</label></td>
+        <td>
+            <input [readonly]=true type="text" name="p_phone"[(ngModel)]="guideList.phonenumber" >
+        </td></tr>
+    <tr>
+        <td><label>Wage/day:</label></td>
+        <td><input [readonly]=true type="text" name="p_price" [(ngModel)]="guideList.price" ></td>
+    </tr>
+    <tr>
+        <td><label>Customer name:</label></td>
+        <td><input type="text" name="p_cname"required ></td>
+    </tr>
+    <tr>
+        <td><label>Total members:</label></td>
+        <td><input type="text" name="p_cmem"required ></td>
+    </tr>
+    <tr>
+        <td><label>Email:</label></td>
+        <td><input type="email" name="p_email"required ></td>
+    </tr>
+    <tr>
+        <td><label>Select date:</label></td>
+        <td><input type="date" name="p_date"required  ></td>
+    </tr>
+    <tr>
+        <td> <small style="color: red;">*An initial amount of Rs.500 must be paid </small></td>
+       
+        <td> <button type="button" style="width: 100px;" (click)="confirm()" [disabled]="book.form.invalid" class="btn btn-success btn-block">Pay</button></td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+</form>
+</div>
+</div>

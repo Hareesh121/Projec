@@ -1,0 +1,183 @@
+
+
+
+
+<div class="container">
+  <div class="card-header"><h1>GUIDES LIST</h1></div>
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search By District"
+  style="width: 300px;" [(ngModel)]="searchTerm">
+</div>
+</div>
+
+
+
+
+<div class="container">
+  
+  <table class="responsive-table">
+ 
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">DISTRICT</th>
+        <th scope="col">LANGUAGES KNOWN</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">WAGE/DAY</th>
+        <th scope="col">RATING/5</th>
+        <th scope="col">AVAILABLE</th>
+        <th scope="col">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let guide of filteredguides">
+        <th scope="row">{{guide.Name}}</th>
+        <td data-title="DISTRICT">{{guide.district}}</td>
+        <td data-title="LANGUAGES KNOWN">{{guide.Languagesknown}}</td>
+        <td data-title="PHONE">{{guide.phonenumber}}</td>
+        <td data-title="WAGE/DAY" >{{guide.price}}</td>
+        <td data-title="RATING">{{guide.Rating}}</td>
+        <td data-title="AVAILABLE" >{{guide.Available}}</td>
+        <!-- <td data-title="Budget" data-type="currency">$150,000,000</td> -->
+    
+      
+        <td>  <button class="btn btn-primary" style="width: 30px;"   [disabled]="guide.Available== 'No'" style="margin:5px" (click)="book(guide)">Book</button>
+          <button class="btn btn-primary"*ngIf="_auth.loggedIn()" style="margin:5px" (click)="show(guide)">Details</button>
+          <button class="btn btn-primary"*ngIf="_auth.loggedinAdmin()" style="margin:5px" (click)="doUpdate(guide)">Update</button>
+          <button class="btn btn-danger"(click)="confirm(guide)" style="margin:5px"*ngIf="_auth.loggedinAdmin()">Delete</button></td>
+      </tr>
+       
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container">
+<div class="card" style="width: 20rem;" *ngFor="let guide of filteredguides" >
+
+  <div class="card-body">
+    <h5 class="card-title">NAME:{{guide.Name}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><span class="des">DISTRICT:</span>{{guide.district}}</li>
+    <li class="list-group-item"><span class="des">PHONE:</span>{{guide.phonenumber}}</li>
+    <li class="list-group-item"><span class="des">PRICE/DAY:</span>{{guide.price}}</li>
+    <li class="list-group-item"><span class="des">RATING:</span>{{guide.Rating}}</li>
+    <li class="list-group-item"><span class="des" >AVAILABLE:</span>{{guide.Available}}</li>
+  </ul>
+  <div class="card-body">
+    <button class="btn btn-primary" [disabled]="guide.Available== 'No'" style="margin-right:10px" (click)="book(guide)">Book</button>
+    <button class="btn btn-primary" style="margin-right:10px" (click)="doUpdate(guide)">Update</button>
+    <button class="btn btn-danger"(click)="delete(guide)">Delete</button>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+<!-- <div class="cards" style="margin: 30px;">
+<div class="card w-50"*ngFor="let guide of filteredguides  ">
+    <div class="card-body">
+      <p class="card-text s"><span class="des">NAME:</span>{{guide.Name}}</p> -->
+      <!-- <p class="card-text">Descripton:{{guide.description}}</p> -->
+      <!-- <p class="card-text">Languages Known:{{guide.Languagesknown}}</p> -->
+      <!-- <p class="card-text">Specialization:{{guide.Specialization}}</p> -->
+      <!-- <p class="card-text s"><span class="des">DISTRICT:</span>{{guide.district}}</p>
+      <p class="card-text s"><span class="des">PHONE:</span>{{guide.phonenumber}}</p>
+      <p class="card-text s"><span class="des">PRICE/DAY:</span>{{guide.price}}</p>
+      <p class="card-text s"><span class="des">RATING:</span>{{guide.Rating}}</p>
+
+
+      
+      <p  class="card-text s"><span class="des" >AVAILABLE:</span>{{guide.Available}}</p> -->
+   
+   
+      <!-- <div class="form-group">
+        <ngb-rating [formControl]="ctrl" [max]="5"></ngb-rating>
+        <div class="form-text small">
+          <div *ngIf="ctrl.valid" class="text-success">Thanks!</div>
+          <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
+        </div>
+      </div>
+      
+      <hr>
+      <pre>Rating: <b>{{ guide.Rating}}/5</b></pre>
+      <button class="btn btn-sm btn-outline-{{ ctrl.disabled ? 'danger' : 'success'}} mr-2" (click)="toggle()">
+        {{ ctrl.disabled ? "control disabled" : " control enabled" }}
+      </button>
+      <button class="btn btn-sm btn-outline-primary mr-2" (click)="ctrl.setValue(null)">Clear</button> -->
+     
+     
+   
+
+<!-- <ngb-rating     [(rate)]="currentRate" [max]="5">
+  <ng-template let-fill="fill" let-index="index">
+    <span class="star"     [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+  </ng-template>
+</ngb-rating>
+<hr>
+<pre>Rate: <b>{{guide.Rating}}</b></pre> -->
+      <!-- <a href="#" class="btn btn-primary">Update</a>
+      <a href="#" class="btn btn-primary">Delete</a>
+      <a href="#" class="btn btn-primary">Book</a>
+    </div>
+  </div>
+  
+  </div> -->
+
+
+
+
+
+
+                             
+                                <!-- <button class="btn btn-primary" [disabled]="guide.Available== 'No'" style="margin-right:10px" (click)="book(guide)">Book</button>
+                                <button class="btn btn-primary" style="margin-right:10px" (click)="doUpdate(guide)">Update</button>
+                                <button class="btn btn-danger"(click)="delete(guide)">Delete</button>
+                              </div>
+</div>
+</div> -->
+<!-- </div> -->
+                                <!-- <a class="action-btn">
+
+
+                              
+                                    <i class="material-icons">delete</i>
+                                </a> -->
+                                <!-- <button class="btn btn-danger">Delete</button>
+                            </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> -->

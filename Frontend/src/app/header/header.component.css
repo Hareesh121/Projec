@@ -1,0 +1,30 @@
+/* .navbar-nav{
+    hover:green
+} */
+
+.btn
+{
+
+    margin:10px;
+}
+/* .navbar-nav.nav-link:hover
+{
+    color: crimson;
+}
+ul a:hover
+    {
+        color:rgb(0, 255, 64)
+    } */
+
+    .btn:hover
+{
+    color: rgb(19, 179, 19);
+}
+
+
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: rgb(94, 255, 20);
+}

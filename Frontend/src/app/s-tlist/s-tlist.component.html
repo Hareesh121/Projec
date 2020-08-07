@@ -1,0 +1,55 @@
+
+<div class="container">
+<div class="card">
+    <div class="card-header text-center display-3">
+        <!-- {{title}} -->
+        DETAILS
+    </div>
+    <div class="card-body" style="background-color: cornflowerblue;">
+        <form class="was-validated" >
+            <div class="form-group row" >
+                <label for="" class="col-3"><h5>Name:</h5></label>
+                <span type="number" class="form-control col-6" name="Name"  required>{{guide.Name}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Specialization:</h5></label>
+                <span type="number" class="form-control col-6" name="productspec"  required>{{guide.Specialization}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>District:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.district}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Phone:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.phonenumber}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Email:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.email}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Wage/day:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.price}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Rating/5:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.Rating}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <div class="form-group row">
+                <label for="" class="col-3"><h5>Available:</h5></label>
+                <span type="number" class="form-control col-6" name="productId"  required>{{guide.Available}}</span>
+                <!-- <div class="invalid-feedback col-3"><h6>Please fill Product Id field</h6></div> -->
+            </div>
+            <button type="button" class="btn btn-success" [disabled]="guide.Available== 'No'" style="float: right; margin-right: 200px;" (click)="book(guide)">Book</button>
+            <!-- <button class="btn-lg btn-success mx-auto btn-block col-3" (click)="updateProduct(single.productId, single.productName, single.productCode, single.releaseDate, single.description, single.price, single.starRating, single.imageUrl)"><h3>Update</h3></button> -->
+        </form>
+    </div>
+</div>
+</div>

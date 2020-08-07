@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~bootstrap/" */
+body{
+     background-image: url(https://cdn1.goibibo.com/india-kerala-149251808216o.jpg);
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     position: relative;
+ min-height: 100vh;
+ padding-bottom: 300px;
+}

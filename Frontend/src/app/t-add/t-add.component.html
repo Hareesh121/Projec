@@ -1,0 +1,67 @@
+
+<div class="container" style="padding: 30px;">
+<div class="card">
+    <form #user="ngForm" (ngSubmit)="Addguide()">
+        <div class="card-header" style="padding: 10px;">
+      ADD GUIDE
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+
+                    <tbody>
+                        <tr>
+                        <td><label>Name:</label></td>
+                        <td>
+                            <input type="text" name="p_name" [(ngModel)]="guideList.Name" required>
+                        </td></tr>
+                        <tr>
+                            <td><label>Languages Known:</label></td>
+                            <td><input type="text" name="p_Languagesknown"  [(ngModel)]="guideList.Languagesknown"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Specialization:</label></td>
+                            <td><input type="text" name="p_Specialization"  [(ngModel)]="guideList.Specialization"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Wage/day:</label></td>
+                            <td><input type="text" name="p_price"  [(ngModel)]="guideList.price"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>District:</label></td>
+                            <td><input type="text" name="p_district"  [(ngModel)]="guideList.district"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Phone number:</label></td>
+                            <td><input type="text" name="p_phonenumber"  [(ngModel)]="guideList.phonenumber"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Email:</label></td>
+                            <td><input type="text" name="p_phonenumber"  [(ngModel)]="guideList.email"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Rating:</label></td>
+                            <td><input type="number" name="p_Rating"  [(ngModel)]="guideList.Rating"required></td>
+                        </tr>
+                        <tr>
+                            <td><label>Available:</label></td>
+                            <td><input type="text" name="p_Available"  [(ngModel)]="guideList.Available"required></td>
+                        </tr>
+                        <!-- <tr>
+                            <td><label>Product date</label></td>
+                            <td><input type="text" name="p_date" required></td>
+                        </tr> -->
+                        
+                 
+                        <tr>
+                            <td> <small style="color: red;">*All Fields must be filled </small></td>
+                           
+                            <td><button type="submit" [disabled]="user.form.invalid" class="btn btn-success btn-block" style="width: 100px;">Submit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+</div>

@@ -1,0 +1,28 @@
+.card-body
+{
+    background-color: rgb(104, 124, 161);
+}
+.card-header
+{
+    color: black;
+    font-family: fantasy;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.card
+{
+border: 2px solid green;
+box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.644);
+}
+label{
+    color: black;
+    font-family: fantasy;
+    /* font-size: px; */
+    letter-spacing: 2px;
+}
+
+small{
+    color: rgba(143, 45, 45, 0.493);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+}
